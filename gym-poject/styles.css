@@ -1,0 +1,56 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(img/background-img.jpg);
+}
+
+.header {
+    padding: 15px;
+    color: aliceblue;
+    border: 2px solid white;
+}
+
+.left {
+    text-align: center;
+    display: inline-block;
+    border: 2px solid red;
+}
+
+.mid {
+    display: inline-block;
+    width: fit-content;
+    border: 2px solid khaki;
+}
+
+.right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    border: 2px solid orange;
+}
+
+.left img {
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+.header .left p {
+    text-align: center;
+    font-size: larger;
+    margin: 0px;
+    font-weight: bolder;
+}
+
+.mid ul li {
+    display: inline;
+    list-style: none;
+}
+
+.mid ul a {
+    padding: 0px 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
