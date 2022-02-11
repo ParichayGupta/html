@@ -7,25 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex-Box</title>
     <style>
+        h1 {
+            text-align: center;
+        }
+        
         .container {
             margin: 10px;
-            height: 500px;
+            height: 400px;
             color: aliceblue;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: bold;
             border: 2px solid black;
-            /* Flex - properties */
+            /* Flex - properties for Flex-box */
+            /* initialize container as flex-box */
             display: flex;
+            /* item flow direction */
+            flex-direction: row;
+            /*let item wrap inside the flex box*/
             flex-wrap: wrap;
+            /* shorthand for flex-direction and flex-wrap */
+            flex-flow: row wrap;
+            /*adds space to the both side of each item*/
+            justify-content: space-around;
+            /* adds even space to the both side of the item */
+            justify-content: space-evenly;
+            /* add space to the both side of the item except starting and end */
+            justify-content: space-between;
+            /* align-items to the center of the flex box (vertically) */
+            align-items: center;
+            /*item at the left-top*/
+            align-items: flex-start;
+            /*item at the left-bottom*/
+            align-items: flex-end;
+            /*item at the left-bottom*/
+            align-items: stretch;
         }
         
         .box {
             margin: 10px;
             padding: 10px;
+            width: 100px;
             height: 100px;
-            border: 2px solid yellow;
-            background-color: blue;
+            border: 2px solid brown;
+            background-color: orange;
         }
+        
+        #box1 {}
+        
+        #box2 {}
+        
+        #box3 {}
         
         .flex-notes {
             display: flex;
@@ -50,19 +81,19 @@
 </head>
 
 <body>
-    <h1>This is flexbox Example</h1>
+    <h1>This is Flexbox Example</h1>
     <div class="container">
 
-        <div class="box" id="box1">This is Div1</div>
-        <div class="box" id="box2">This is Div2</div>
-        <div class="box" id="box3">This is Div3</div>
-        <div class="box" id="box4">This is Div4</div>
-        <div class="box" id="box5">This is Div5</div>
-        <div class="box" id="box6">This is Div6</div>
+        <div class="box" id="box1">This is Div 1</div>
+        <div class="box" id="box2">This is Div 2</div>
+        <div class="box" id="box3">This is Div 3</div>
+        <div class="box" id="box4">This is Div 4</div>
+        <div class="box" id="box5">This is Div 5</div>
+        <div class="box" id="box6">This is Div 6</div>
     </div>
 
     <div class="flex-notes">
-        <h2>Flex notes</h2>
+        <h2>Flex-box properties</h2>
         <ul>
             <li class="list-items">
                 <p>Flex is a CSS display property which divides items (elements) into rows and columns.</p>
@@ -74,22 +105,37 @@
                 <p>Flex wrap property will help to make the flex-items responsive. By default its nowrap.</p>
             </li>
             <li class="list-items">
-                <p></p>
+                <p>justify-content property will help items to take equal space.</p>
             </li>
             <li class="list-items">
-                <p>this is list item</p>
+                <p>alilgn-items property will help align item to different locations. By-default it's flex-start but we can align items with different attributes like cneter, flex-end, flex-start.</p>
             </li>
             <li class="list-items">
-                <p>this is list item</p>
-            </li>
-            <li class="list-items">
-                <p>this is list item</p>
-            </li>
-            <li class="list-items">
-                <p>this is list item</p>
+                <p>align-items: stretch will automatically adds even spaces vertically between items to keep it responsive.</p>
             </li>
         </ul>
-
+    </div>
+    <div class="flex-notes">
+        <ul>
+            <li>
+                <p></p>
+            </li>
+            <li>
+                <p></p>
+            </li>
+            <li>
+                <p></p>
+            </li>
+            <li>
+                <p></p>
+            </li>
+            <li>
+                <p></p>
+            </li>
+            <li>
+                <p></p>
+            </li>
+        </ul>
     </div>
 </body>
 
