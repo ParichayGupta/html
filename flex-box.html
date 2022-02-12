@@ -13,7 +13,7 @@
         
         .container {
             margin: 10px;
-            height: 400px;
+            height: 300px;
             color: aliceblue;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: bold;
@@ -27,20 +27,20 @@
             flex-wrap: wrap;
             /* shorthand for flex-direction and flex-wrap */
             flex-flow: row wrap;
-            /*adds space to the both side of each item*/
-            justify-content: space-around;
             /* adds even space to the both side of the item */
-            justify-content: space-evenly;
-            /* add space to the both side of the item except starting and end */
+            /* justify-content: space-evenly;
+            /*add space to the both side of the item except starting and end 
             justify-content: space-between;
+            /*adds space to the both side of each item
+            justify-content: space-around; */
             /* align-items to the center of the flex box (vertically) */
             align-items: center;
-            /*item at the left-top*/
-            align-items: flex-start;
             /*item at the left-bottom*/
             align-items: flex-end;
             /*item at the left-bottom*/
             align-items: stretch;
+            /*item at the left-top*/
+            align-items: flex-start;
         }
         
         .box {
@@ -52,18 +52,12 @@
             background-color: orange;
         }
         
-        #box1 {}
-        
-        #box2 {}
-        
-        #box3 {}
-        
         .flex-notes {
             display: flex;
             margin: 10px;
             border: 2px solid black;
             padding: 15p;
-            height: 500px;
+            height: fit-content;
             color: darkblue;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             flex-direction: column;
@@ -77,6 +71,36 @@
         .list-items {
             font-size: large;
         }
+        
+        #box1 {
+            /* flex properties for flex-items */
+            /* The higher the order the later the object will be displayed */
+            order: 2;
+            /* The element will grow more in comparison to other elements having lower flex-grow value. */
+            flex-grow: 2;
+            /* The element will shrink more in comparison to other elements having lower flex-shrink value. */
+            flex-shrink: 3;
+        }
+        
+        #box2 {
+            order: 3;
+            flex-grow: 4;
+        }
+        
+        #box3 {
+            order: 4;
+            /* When flex-direction is row flex-basis will control the width for the element */
+            /* When flex-direction is column flex-basis will control the height for the element */
+            flex-basis: 320px;
+            /* Shorthand flex: flex-grow flex-shrink flex-basis */
+            flex: 2 2 320px;
+            /* Item will align itself to the flex-start */
+            align-self: flex-start;
+            /* Item will align itself to the flex-end */
+            align-self: flex-end;
+            /* Item will align itself to the center */
+            align-self: center;
+        }
     </style>
 </head>
 
@@ -87,9 +111,9 @@
         <div class="box" id="box1">This is Div 1</div>
         <div class="box" id="box2">This is Div 2</div>
         <div class="box" id="box3">This is Div 3</div>
-        <div class="box" id="box4">This is Div 4</div>
+        <!-- <div class="box" id="box4">This is Div 4</div>
         <div class="box" id="box5">This is Div 5</div>
-        <div class="box" id="box6">This is Div 6</div>
+        <div class="box" id="box6">This is Div 6</div> -->
     </div>
 
     <div class="flex-notes">
@@ -108,7 +132,7 @@
                 <p>justify-content property will help items to take equal space.</p>
             </li>
             <li class="list-items">
-                <p>alilgn-items property will help align item to different locations. By-default it's flex-start but we can align items with different attributes like cneter, flex-end, flex-start.</p>
+                <p>align-items property will help align item to different locations. By-default it's flex-start but we can align items with different attributes like center, flex-end, flex-start.</p>
             </li>
             <li class="list-items">
                 <p>align-items: stretch will automatically adds even spaces vertically between items to keep it responsive.</p>
@@ -116,25 +140,37 @@
         </ul>
     </div>
     <div class="flex-notes">
+        <h2>Flex-items properties</h2>
         <ul>
-            <li>
-                <p></p>
+            <li class="list-items">
+                <p>Order: - The higher the order the later the element will be displayed</p>
             </li>
-            <li>
-                <p></p>
+            <li class="list-items">
+                <p>flex-grow: When we increase the screen width/size the element with higher flex-grow value will take more space in comparison with other elements.</p>
             </li>
-            <li>
-                <p></p>
+            <li class="list-items">
+                <p>flex-shrink: When we decrease the screen width/size the element with higher flex-grow value will take less space in comparison with other elements.</p>
             </li>
-            <li>
-                <p></p>
+            <li class="list-items">
+                <p>Negative numbers are not allowed in the flex-grow and flex-shrink properties.</p>
             </li>
-            <li>
-                <p></p>
+            <li class="list-items">
+                <p>This property is used to manipulate the width or height of the element.
+                </p>
             </li>
-            <li>
-                <p></p>
+            <li class="list-items">
+                <p>When flex-direction is row, flex-basis will control the width of the element.</p>
             </li>
+            <li class="list-items">
+                <p>When flex-direction is column, flex-basis will control the height of the element.</p>
+            </li>
+            <li class="list-items">
+                <p>shorthand- flex: (flex-grow flex-shrink flex-basis);</p>
+            </li>
+            <li class="list-items">
+                <p>align-self: item will align itself to different postions like flex-start, flex-end, center etc.</p>
+            </li>
+
         </ul>
     </div>
 </body>
