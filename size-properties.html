@@ -23,7 +23,10 @@
         }
         
         #heading1 {
+            /* Font-size of heading1 will be 3 times of it's parent element */
             font-size: 3em;
+            /* padding will be three time of what the font-size of heading is not related to the parent element */
+            padding: 3em;
         }
     </style>
 </head>
@@ -40,10 +43,19 @@
         <div class="notes">
             <ul>
                 <li class="list-items">
-                    <p>em - This font size is calculated for the element according to it's parent element</p>
+                    <p>em - This font size is calculated for the element relative to font-size of it's parent element (container)</p>
                 </li>
                 <li class="list-items">
-                    <p>We can see the size computation in the computed section of chrome dev-tools</p>
+                    <p>For ex: If Font size of container is 10px and we give font-size to paragraph 3em then it will calculated as 10*3 that is 30px.</p>
+                </li>
+                <li class="list-items">
+                    <p>But if we apply padding or margin to the element then, the padding/margin will depend on the font-size of the same element not to the parent element. </p>
+                </li>
+                <li class="list-items">
+                    <p>For ex: If we give padding of 3em to the same element above having calculated font-size of 30px then the padding will be calculated as 30*3 that is 90px.</p>
+                </li>
+                <li class="list-items">
+                    <p>We can see the size computation in the computed section of chrome dev-tools.</p>
                 </li>
                 <li class="list-items">
                     <p>rem - </p>
