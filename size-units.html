@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Size - properties</title>
+    <title>Size-units</title>
 
     <style>
+        html {
+            font-size: 25px;
+            background-color: black;
+        }
+        
         .container {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: darkblue;
             border: 2px solid black;
             text-align: center;
             margin: 10px;
-            padding: 5px;
+            font-size: 20px;
+            background-color: tomato;
         }
         
         .list-items {
@@ -27,6 +33,13 @@
             font-size: 3em;
             /* padding will be three time of what the font-size of heading is not related to the parent element */
             padding: 3em;
+        }
+        
+        #heading2 {
+            /* Font-size of heading1 will be 3 times of font-size of html tag */
+            font-size: 3rem;
+            /* padding will be 3 time of font-size of html tag */
+            padding: 3rem;
         }
     </style>
 </head>
@@ -43,7 +56,7 @@
         <div class="notes">
             <ul>
                 <li class="list-items">
-                    <p>em - This font size is calculated for the element relative to font-size of it's parent element (container)</p>
+                    <p>em - This font size is calculated for the element relative to font-size of it's parent element (container).</p>
                 </li>
                 <li class="list-items">
                     <p>For ex: If Font size of container is 10px and we give font-size to paragraph 3em then it will calculated as 10*3 that is 30px.</p>
@@ -58,11 +71,27 @@
                     <p>We can see the size computation in the computed section of chrome dev-tools.</p>
                 </li>
                 <li class="list-items">
-                    <p>rem - </p>
+                    <p>rem - This font size is calculated for the element relative to font-size of html tag. </p>
                 </li>
                 <li class="list-items">
-                    <p></p>
+                    <p>For ex: If Font size of html tag is 25px and we give font-size to paragraph 3em then it will calculated as 25*3 that is 75px.</p>
                 </li>
+                <li class="list-items">
+                    <p>Margin and padding will also calculated same as font-size.</p>
+                </li>
+                <li class="list-items">
+                    <p>For ex: if we give padding of 3rem to the same element above having 3rem font-size, the padding will be calculated as font-size of html tag* padding in rem that is 75px.</p>
+                </li>
+                <li class="list-items">
+                    <p>vh - used to give height for the element according to the screen size.</p>
+                </li>
+                <li class="list-items">
+                    <p> 100vh means full size of the display. 50vh means half of the screen size.</p>
+                </li>
+                <li class="list-items">
+                    <p>vw is works similar as vh, the only difference is it changes width instead of height.</p>
+                </li>
+
             </ul>
         </div>
     </div>
