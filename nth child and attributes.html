@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child</title>
+    <style>
+        .container {
+            display: block;
+            width: 233px;
+            margin: auto;
+        }
+        
+        input {
+            display: block;
+        }
+        
+        input[type="text"] {
+            border: 2px solid tomato;
+            font-size: large;
+            padding: 8px;
+            border-radius: 20px;
+            color: blueviolet;
+        }
+        
+        input[type="password"] {
+            border: 2px solid blueviolet;
+            font-size: large;
+            padding: 8px;
+            border-radius: 20px;
+        }
+        
+        input[type="submit"] {
+            background-color: darkslateblue;
+            color: aliceblue;
+            border-radius: 20px;
+            width: 80px;
+            padding: 10px;
+            font-size: large;
+        }
+        
+        a[target] {
+            display: block;
+            width: fit-content;
+            color: black;
+        }
+        
+        a[target='_self'] {
+            display: block;
+            width: fit-content;
+            color: red;
+        }
+        
+        li {
+            padding: 8px;
+            width: fit-content;
+        }
+        
+        li:nth-child(3) {
+            background-color: yellow;
+        }
+        
+        li:nth-child(even) {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="noaction.php" class="form-group">
+
+            <input type="text" placeholder="enter your name">
+            <input type="password" placeholder="enter your password">
+            <input type="submit" value="Submit">
+            <h1>
+                <a href="https://google.com" target="_blank">google</a>
+            </h1>
+            <h1>
+                <a href="https://pinterest.com" target="_self">pinterest</a>
+            </h1>
+        </form>
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+            <li>Item6</li>
+            <li>Item7</li>
+            <li>Item8</li>
+            <li>Item9</li>
+            <li>Item10</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
+
+</html>
