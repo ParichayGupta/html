@@ -6,103 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex-Box</title>
-    <style>
-        h1 {
-            text-align: center;
-        }
-        
-        .container {
-            margin: 10px;
-            height: 300px;
-            color: aliceblue;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-weight: bold;
-            border: 2px solid black;
-            /* Flex - properties for Flex-box */
-            /* initialize container as flex-box */
-            display: flex;
-            /* item flow direction */
-            flex-direction: row;
-            /*let item wrap inside the flex box*/
-            flex-wrap: wrap;
-            /* shorthand for flex-direction and flex-wrap */
-            flex-flow: row wrap;
-            /* adds even space to the both side of the item */
-            /* justify-content: space-evenly;
+
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    
+    .container {
+        margin: 10px;
+        height: 300px;
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        border: 2px solid black;
+        /* Flex - properties for Flex-box */
+        /* initialize container as flex-box */
+        display: flex;
+        /* item flow direction */
+        flex-direction: row;
+        /*let item wrap inside the flex box*/
+        flex-wrap: wrap;
+        /* shorthand for flex-direction and flex-wrap */
+        flex-flow: row wrap;
+        /* adds even space to the both side of the item */
+        /* justify-content: space-evenly;
             /*add space to the both side of the item except starting and end 
             justify-content: space-between;
             /*adds space to the both side of each item
             justify-content: space-around; */
-            /* align-items to the center of the flex box (vertically) */
-            align-items: center;
-            /*item at the left-bottom*/
-            align-items: flex-end;
-            /*item at the left-bottom*/
-            align-items: stretch;
-            /*item at the left-top*/
-            align-items: flex-start;
-        }
-        
-        .box {
-            margin: 10px;
-            padding: 10px;
-            width: 100px;
-            height: 100px;
-            border: 2px solid brown;
-            background-color: orange;
-        }
-        
-        .flex-notes {
-            display: flex;
-            margin: 10px;
-            border: 2px solid black;
-            padding: 15p;
-            height: fit-content;
-            color: darkblue;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
-        
-        .flex-notes h2 {
-            text-align: center;
-        }
-        
-        .list-items {
-            font-size: large;
-        }
-        
-        #box1 {
-            /* flex properties for flex-items */
-            /* The higher the order the later the object will be displayed */
-            order: 2;
-            /* The element will grow more in comparison to other elements having lower flex-grow value. */
-            flex-grow: 2;
-            /* The element will shrink more in comparison to other elements having lower flex-shrink value. */
-            flex-shrink: 3;
-        }
-        
-        #box2 {
-            order: 3;
-            flex-grow: 4;
-        }
-        
-        #box3 {
-            order: 4;
-            /* When flex-direction is row flex-basis will control the width for the element */
-            /* When flex-direction is column flex-basis will control the height for the element */
-            flex-basis: 320px;
-            /* Shorthand flex: flex-grow flex-shrink flex-basis */
-            flex: 2 2 320px;
-            /* Item will align itself to the flex-start */
-            align-self: flex-start;
-            /* Item will align itself to the flex-end */
-            align-self: flex-end;
-            /* Item will align itself to the center */
-            align-self: center;
-        }
-    </style>
-</head>
+        /* align-items to the center of the flex box (vertically) */
+        align-items: center;
+        /*item at the left-bottom*/
+        align-items: flex-end;
+        /*item at the left-bottom*/
+        align-items: stretch;
+        /*item at the left-top*/
+        align-items: flex-start;
+    }
+    
+    .box {
+        margin: 10px;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        border: 2px solid brown;
+        background-color: orange;
+    }
+    
+    .flex-notes {
+        display: flex;
+        margin: 10px;
+        border: 2px solid black;
+        padding: 15p;
+        height: fit-content;
+        color: darkblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .flex-notes h2 {
+        text-align: center;
+    }
+    
+    .list-items {
+        font-size: large;
+    }
+    
+    #box1 {
+        /* flex properties for flex-items */
+        /* The higher the order the later the object will be displayed */
+        order: 2;
+        /* The element will grow more in comparison to other elements having lower flex-grow value. */
+        flex-grow: 2;
+        /* The element will shrink more in comparison to other elements having lower flex-shrink value. */
+        flex-shrink: 3;
+    }
+    
+    #box2 {
+        order: 3;
+        flex-grow: 4;
+    }
+    
+    #box3 {
+        order: 4;
+        /* When flex-direction is row flex-basis will control the width for the element */
+        /* When flex-direction is column flex-basis will control the height for the element */
+        flex-basis: 320px;
+        /* Shorthand flex: flex-grow flex-shrink flex-basis */
+        flex: 2 2 320px;
+        /* Item will align itself to the flex-start */
+        align-self: flex-start;
+        /* Item will align itself to the flex-end */
+        align-self: flex-end;
+        /* Item will align itself to the center */
+        align-self: center;
+    }
+</style>
 
 <body>
     <h1>This is Flexbox Example</h1>

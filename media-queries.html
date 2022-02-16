@@ -6,47 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Quires</title>
-    <style>
-        .box {
-            font-size: 30px;
-            text-align: center;
-            background-color: khaki;
-            display: none;
-        }
-        
-        @media (max-width:390px) {
-            #box-1 {
-                display: block;
-                background-color: violet;
-                color: aliceblue;
-            }
-        }
-        
-        @media (min-width:391px) and (max-width:768px) {
-            #box-2 {
-                display: block;
-                background-color: orangered;
-                color: aliceblue;
-            }
-        }
-        
-        @media (min-width:769px) and (max-width:1050px) {
-            #box-3 {
-                display: block;
-                background-color: peru;
-                color: aliceblue;
-            }
-        }
-        
-        @media (min-width:1051px) {
-            #box-4 {
-                display: block;
-                background-color: blueviolet;
-                color: aliceblue;
-            }
-        }
-    </style>
+
 </head>
+<style>
+    .box {
+        font-size: 30px;
+        text-align: center;
+        background-color: khaki;
+        display: none;
+    }
+    
+    @media (max-width:390px) {
+        #box-1 {
+            display: block;
+            background-color: violet;
+            color: aliceblue;
+        }
+    }
+    
+    @media (min-width:391px) and (max-width:768px) {
+        #box-2 {
+            display: block;
+            background-color: orangered;
+            color: aliceblue;
+        }
+    }
+    
+    @media (min-width:769px) and (max-width:1050px) {
+        #box-3 {
+            display: block;
+            background-color: peru;
+            color: aliceblue;
+        }
+    }
+    
+    @media (min-width:1051px) {
+        #box-4 {
+            display: block;
+            background-color: blueviolet;
+            color: aliceblue;
+        }
+    }
+</style>
 
 <body>
     <div class="box" id="box-1">This is mobile Screen.</div>
