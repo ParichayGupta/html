@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selectors</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        
+        header::before {
+            background: url('https://source.unsplash.com/1600x900/?dark') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .navigation {
+            display: flex;
+            font-size: 20px;
+        }
+        
+        li {
+            list-style: none;
+            margin: 20px 24px;
+        }
+        
+        section {
+            border: 2px solid yellowgreen;
+            margin: 25px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h2 {
+            font-size: 3rem;
+        }
+        
+        section::before {
+            content: "This is before content.";
+        }
+        
+        section::after {
+            content: "This is after content.";
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li>Home</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <section>
+            <h2>This is Awesome WebPage</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda autem cumque odio aut omnis laudantium vero libero obcaecati esse enim facere sint ratione in ullam quia quidem, cupiditate fugit veniam illum quasi illo molestiae? Animi,eius
+                enim quos eaque reprehenderit, consequuntur nostrum necessitatibus non eveniet facilis est tenetur dolorem tempore.</p>
+        </section>
+    </header>
+
+</body>
+
+</html>
