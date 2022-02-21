@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+</head>
+<style>
+    /* For global variables */
+    
+     :root {
+        --max-width: 600px;
+    }
+    
+    .container {
+        display: flex;
+    }
+    
+    .box {
+        /* works as local variable */
+        --background-color: red;
+        padding: 8px;
+        margin: 10px;
+        background-color: rebeccapurple;
+        border: 2px solid var(--background-color);
+        color: azure;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id accusamus deleniti minima. Eius quibusdam voluptatum optio. Doloremque aut impedit odio quasi, harum modi. Facilis sequi ipsa alias illo velit quae! Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Praesentium dignissimos rerum iste perspiciatis a aliquam eligendi asperiores, excepturi laudantium possimus laboriosam repellendus unde sit similique. Nobis laudantium nostrum maxime odio!</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id accusamus deleniti minima. Eius quibusdam voluptatum optio. Doloremque aut impedit odio quasi, harum modi. Facilis sequi ipsa alias illo velit quae! Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Praesentium dignissimos rerum iste perspiciatis a aliquam eligendi asperiores, excepturi laudantium possimus laboriosam repellendus unde sit similique. Nobis laudantium nostrum maxime odio!</p>
+        </div>
+    </div>
+</body>
+
+</html>
