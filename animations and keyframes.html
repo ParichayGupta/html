@@ -7,9 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animations and keyframe</title>
 </head>
+<style>
+    .container {
+        background-color: saddlebrown;
+    }
+    
+    .animated-box {
+        width: 250px;
+        height: 250px;
+        background-color: darkgray;
+        /* position: relative will help our element to move */
+        position: relative;
+        /* name of the animation  */
+        animation-name: box-animation;
+        /* duration - how long the animation will take to complete.  */
+        animation-duration: 2s;
+        /* how many times the animation occurs. */
+        /* for infinite times*/
+        animation-iteration-count: infinite;
+        /* for 3 times */
+        animation-iteration-count: 3;
+        /* animate till the "to" */
+        animation-fill-mode: forwards;
+        /* animate till "to" and come back to "from" */
+        animation-fill-mode: backwards;
+        /* animate faster or slower depending of the function - ease, ease-in, ease-out etc  */
+        animation-timing-function: ease-out;
+        /* animation will start after certain amount of time  */
+        animation-delay: 2s;
+    }
+    
+    @keyframes box-animation {
+        from {
+            width: 250px;
+        }
+        to {
+            width: 1200px;
+        }
+    }
+</style>
 
 <body>
-
+    <div class="container">
+        <div class="animated-box">
+            <h2>This is animated-box.</h2>
+        </div>
+    </div>
 </body>
 
 </html>
