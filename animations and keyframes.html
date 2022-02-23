@@ -35,7 +35,10 @@
         animation-timing-function: ease-out;
         /* animation will start after certain amount of time  */
         animation-delay: 2s;
+        /* direction in which out animation work */
+        animation-direction: alternate-reverse;
     }
+    /* animation with to an from  */
     
     @keyframes box-animation {
         from {
@@ -45,12 +48,75 @@
             width: 1200px;
         }
     }
+    
+    .animated-box2 {
+        width: 250px;
+        height: 250px;
+        background-color: teal;
+        position: relative;
+        animation-name: animated-box2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode  */
+        animation: animated-box2 8s ease-out 2s 4 forwards;
+    }
+    /* animation with percentage completion */
+    
+    @keyframes animated-box2 {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+        10% {
+            top: 0px;
+            left: 20px;
+        }
+        20% {
+            top: 0px;
+            left: 40px;
+        }
+        30% {
+            top: 10px;
+            left: 50px;
+        }
+        40% {
+            top: 30px;
+            left: 50px;
+        }
+        50% {
+            top: 50px;
+            left: 50px;
+        }
+        60% {
+            top: 50px;
+            left: 30px;
+        }
+        70% {
+            top: 50px;
+            left: 10px;
+        }
+        80% {
+            top: 30px;
+            left: 00px;
+        }
+        90% {
+            top: 10px;
+            left: 0px;
+        }
+        100% {
+            top: 0px;
+            left: 0px;
+        }
+    }
 </style>
 
 <body>
     <div class="container">
         <div class="animated-box">
-            <h2>This is animated-box.</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="animated-box2">
         </div>
     </div>
 </body>
