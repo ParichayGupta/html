@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+</head>
+<style>
+    /* Transition will only work with properties which have continues values like
+    -> width
+    -> height
+    -> background-color
+    -> color
+    -> font-size
+    -> border-radius
+    -> margin and padding 
+    -> opacity
+    -> etc
+     */
+    
+    body {
+        color: aliceblue;
+        font-size: large;
+        background-color: black;
+    }
+    
+    .box {
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: slategrey;
+        /* transition will only apply to background-color */
+        transition-property: background-color;
+        transition-duration: 3s;
+        transition-timing-function: ease-out;
+        transition-delay: 2s;
+        /* transition: transition-property transition duration transition-timing-function transition-delay */
+        transition: background-color 2s ease-in .3s;
+    }
+    
+    .box:hover {
+        background-color: cadetblue;
+        width: 467px;
+        border-radius: 25px;
+    }
+    
+    .box2 {
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: snow;
+        color: purple;
+        transition: all 5s ease-in-out 0.3s;
+    }
+    
+    .box2:hover {
+        background-color: tomato;
+        width: 457px;
+        height: 500px;
+        border-radius: 45px;
+        color: lightgrey;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h2>background-color transition only.</h2>
+    </div>
+    <div class="box2">
+        <h2>All properties transition.</h2>
+    </div>
+</body>
+
+</html>
